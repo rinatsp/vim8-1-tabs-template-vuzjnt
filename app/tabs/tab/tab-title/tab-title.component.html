@@ -1,0 +1,9 @@
+<div [class.tabs__title--active]="active" class="tabs__titles">
+  <ng-content *ngIf="!template"></ng-content>
+  <ng-container
+          *ngIf="template"
+          [ngTemplateOutlet]="template"
+          [ngTemplateOutletContext]="{ data: dataContext }"
+  >
+  </ng-container>
+</div>
